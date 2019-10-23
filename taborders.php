@@ -58,10 +58,10 @@ background-color: #c8e6c9;
 </script>
 <!-- We use while loop to fetch data and display rows of date on html table -->
 <?php
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'yukbauser';
+include("credentials.php");
+ 
+ 
+ 
 
 //post variables 
 

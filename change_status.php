@@ -1,9 +1,9 @@
 <?php
 
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'yukbauser';
+include("credentials.php");
+ 
+ 
+ 
 //post variables 
 
 $status = $_POST['group1'];

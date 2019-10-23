@@ -1,9 +1,9 @@
 <?php
 
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'yukbauser';
+include("credentials.php");
+ 
+ 
+ 
 //post variables 
 
 $orderno = $_POST['d_order_no'];

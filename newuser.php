@@ -1,7 +1,7 @@
 <html>
 <head>
 <?php include 'css/css.html'; ?>
-	
+
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="uploadscript.js"></script>
 
@@ -26,7 +26,7 @@
 					<li id = "myli"><a href="/yukba/login/update.php">Update Profile</a></li>
 					<li id = "myli"><a href="/yukba/login/changepassword.php">Change Password</a></li>
 		</ul>
-	
+
 	</li>
 </ul>
 </nav>
@@ -39,22 +39,22 @@
 <h1>New User</h1>
 
 <form  enctype="multipart/form-data" name="order_form" action="yukbasql.php"  method="POST" >
-			 
+
 <div class="field-wrap">
 	<label class="active highlight">Order No</label>
-		<input type="text" name="order_number" id="order_number" value="<?php 
+		<input type="text" name="order_number" id="order_number" value="<?php
 		//$sql = "SELECT MAX(ORDERNO) FROM theyukbauser";
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "yukbauser";
+		include("credentials.php");
+
+
+
 
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		// Check connection
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
-		} 
+		}
 		$cookie = $_COOKIE['email'];
 		//echo $cookie;
 		$sql = "SELECT * FROM `theyukbauser` WHERE BOUTIQUE_EMAIL = '$cookie' ";
@@ -70,28 +70,28 @@
 	<label>Phone number : <span class="req">*</span></label>
 	<input type="text" name="phone_number" autocomplete="off" >
 	<span class="error"></span>
-</div>						
+</div>
 
 <div class="field-wrap">
 	<label>Full name : <span class="req">*</span></label>
 	<input type="text" name="name" >
-</div>					
+</div>
 
 <div class="field-wrap">
 	<label>Email address : <span class="req">*</span></label>
 	<input type="email" name="email">
-</div>						
+</div>
 
 <div class="field-wrap">
 <label class="active highlight">Date Of Order</label>
-	<input type="date" name="date_of_order" value="<?php echo date('Y-m-d'); ?>">								
+	<input type="date" name="date_of_order" value="<?php echo date('Y-m-d'); ?>">
 </div>
 
 <div class="field-wrap">
 	<textarea name="address" placeholder="Address"></textarea>
-</div> 
+</div>
 
-<!-- //Items list -->	
+<!-- //Items list -->
 
 <h4>Items: </h4>
 
@@ -100,7 +100,7 @@
 		<thead>
 			<tr><td>Item</td><td>Price</td><td>Quantity</td><td>Amount</td></tr>
 		</thead>
-		
+
 		<tbody>
 			<tr>
 				<td><input type="text" class="validate" name="item_name" /></td>
@@ -113,7 +113,7 @@
 				<td><a class="deleteRow"> x </a></td>
 			</tr>
 		</tbody>
-		
+
 		<tfoot>
 			<tr>
 				<td colspan="5" style="text-align: center;">
@@ -122,7 +122,7 @@
 			</tr>
 		</tfoot>
 	</table>
-</div> 
+</div>
 
 <div class="field-wrap">
 	<label class="active highlight">Total Amount : </label>
@@ -139,16 +139,16 @@
 	<label class="active highlight">Total Amount to be paid : </label>
 		<input type="text" id="amount_to_be_paid" class="validate" name="total_amount_to_be_paid">
 </div>
-		
-		
+
+
 <div class="field-wrap">
-		<label class="active highlight">Date of Delivery : </label> 
-		<input type="date" name="date_of_delivery" class="validate">		
+		<label class="active highlight">Date of Delivery : </label>
+		<input type="date" name="date_of_delivery" class="validate">
 </div>
-		
+
 <div class="field-wrap">
 	<textarea name="comments" placeholder="Add Your Comments Here !" class="validate" ></textarea>
-</div> 
+</div>
 
 
 		<div id="filediv"><input name="file[]" type="file" id="file"/></div>
@@ -162,9 +162,9 @@
 		<a href="print.php" target="_blank" class="link" autofocus style="color: white;">Print Bill</a>
 		</button>
 		</div>
-			
+
 </form>
-</div>		
+</div>
 </center>
 </div>
 <div class="col s2">
@@ -177,16 +177,16 @@
 function myFunction() {
 	var phone1 = document.getElementById("phone123").value;
 	//alert(phone1);
-	
+
    window.open("https://www.newlookboutique.com/web/measurement.php?phone="+phone1, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=800");
 	    //window.open("http://localhost/YUKBA/web/measurement.php?phone="+phone1, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=800");
 
 }
 
 function calculate() {
-	var x = document.getElementById('total_amount').value;	
+	var x = document.getElementById('total_amount').value;
 	var y = document.getElementById('advance_paid').value;
-	var amount_to_be_paid = document.getElementById('amount_to_be_paid');	
+	var amount_to_be_paid = document.getElementById('amount_to_be_paid');
 	var myResult = x - y;
 	amount_to_be_paid.value = myResult;
 }
@@ -194,7 +194,7 @@ function calculate() {
 
 $(document).ready(function () {
     var counter = 1;
-    
+
     $('#addrow').on("click", function () {
         counter++;
         var newRow = $("<tr>");
@@ -205,15 +205,15 @@ $(document).ready(function () {
         cols += '<td><input type="text" name="item_amount' + counter + '" readonly="readonly"/></td>';
         cols += '<td><a class="deleteRow"> x </a></td>';
         newRow.append(cols);
-        
+
         $("table.order-list").append(newRow);
     });
-    
+
     $("table.order-list").on("change", 'input[name^="item_rate"], input[name^="item_quantity"]', function (event) {
         calculateRow($(this).closest("tr"));
         calculateGrandTotal();
     });
-    
+
     $("table.order-list").on("click", "a.deleteRow", function (event) {
         $(this).closest("tr").remove();
         calculateGrandTotal();
@@ -221,19 +221,19 @@ $(document).ready(function () {
 
 
   $('#save').click(function(){
-		
-  var item_name = [];  
+
+  var item_name = [];
   var item_rate = [];
   var item_quantity = [];
   var item_amount = [];
-  
+
   var order_num = ($('input[name^="order_number"]').val());
 
-  
+
   $('input[name^="item_name"]').each(function(){
    item_name.push($(this).val());
   });
-  
+
   $('input[name^="item_rate"]').each(function(){
    item_rate.push($(this).val());
   });
@@ -243,7 +243,7 @@ $(document).ready(function () {
   $('input[name^="item_amount"]').each(function(){
    item_amount.push($(this).val());
   });
-  
+
   $.ajax({
    url:"insert.php",
    method:"POST",
@@ -259,7 +259,7 @@ function calculateRow(row) {
     var qty = +row.find('input[name^="item_quantity"]').val();
     row.find('input[name^="item_amount"]').val((price * qty).toFixed(2));
 }
-    
+
 function calculateGrandTotal() {
     var grandTotal = 0;
     $("table.order-list").find('input[name^="item_amount"]').each(function () {

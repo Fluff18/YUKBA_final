@@ -30,10 +30,10 @@
 $sql_query = "SELECT id, name, gender, address, designation, age FROM developers LIMIT 10";
 $resultset = mysqli_query($conn, $sql_query) or die("database error:". mysqli_error($conn));
 */
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'yukbauser';
+include("credentials.php");
+ 
+ 
+ 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname,3306);

@@ -4,11 +4,11 @@
 <head>
   <title>Sign-Up/Login Form</title>
   <?php include 'css/css.html'; 
-    	$host = 'localhost';
+    	include("credentials.php");
       $user = 'root';
       $pass = '';
       $db = 'yukbauser';
-      $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+      $mysqli = new mysqli($servername,$user,$pass,$db) or die($mysqli->error);
       
       
       //setcookie('email', $_SESSION['email'], time()+60*60*24*365);
