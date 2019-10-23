@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>asdf</title>
+	<link rel="stylesheet" href="materialize/css/materialize.min.css">
+	<style type="text/css">
+		.abcd{
+			padding-top: 10%;
+			margin: 0px;
+		}
+	</style>
+<nav>
+<ul id="navul">
+	<li id="navli"><a href="new-1.html" id="nava">Home</a></li>
+	<li id="navli"><a href="new-1.html" id="nava">Track Order</a></li>
+	<li id="navli"><a href="retPage.html" id="nava">View Details</a></li>
+	<li id="navli"><a href="new-1.html" id="nava">Delivery Status</a></li>
+	<li id="navli"><a href="new-1.html" id="nava">Sales</a></li>
+</ul>
+</nav>
+</head>
+<script>
+	function func(){
+		alert("nhello");
+	}
+</script>
+<body>
+	
+
+	<form action="taborders.php" method="POST">
+		<div class="abcd">
+		<center>
+		OrderNo  <span id="from">FROM </span> <input type="number" class="validate" name="o1" min="1" style="width: 10%"> <span id="from">TO </span> <input type="number" name="o2" min="1" style="width: 10%"><br>
+	
+
+		OrderDate <span id="from">FROM </span> <input style="width: 10%" type="date" class="validate" name="od1" min="1"> <span id="from">TO </span> <input type="date" style="width: 10%" name="od2" min="1"><br>
+		DeliveryDate <span id="from">FROM </span> <input style="width: 10%;" type="date" class="validate" name="dd1" min="1"> <span id="from">TO </span> <input type="date" name="dd2" min="1" style="width: 10%;"><br>
+		CustomerName  <input style="width: 10%" type="text" class="validate" name="cname" placeholder="EnterName"><br>
+		CustomerNumber  <input type="number" style="width: 10%;" class="validate" name="cnum" min="1000000000" max="9999999999"> <br>
+		Email ID  <input type="email" style="width: 15%;" class="validate" name="mail"><br>
+		<input type="submit" class="btn waves-effect waves-light" name="submit" value="SUBMIT BUTTON" onclick=func()>
+
+	</form>
+
+</div>
+</body>
+</html>

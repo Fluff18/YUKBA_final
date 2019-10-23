@@ -1,0 +1,285 @@
+<html>
+<head>
+	<style>
+/*h1{
+	text-align: left;
+	color: beige;
+	background-color: black;
+	text-decoration: underline;
+	font-family: cursive;
+	font-style: oblique;
+	
+}
+input[type=text]{
+	background-color: black;
+    color: white;
+	width: 20%;
+	height: 5%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	opacity:0.8;
+}
+
+input[type=number]{
+	background-color: black;
+    color: white;
+	width: 20%;
+	height:5%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	opacity:0.8;
+}
+input[type=select]{
+	background-color: black;
+    color: white;
+	width: 70%;
+	height:20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	opacity:0.8;
+}
+input[type=date]{
+	background-color: black;
+    color: white;
+	width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	opacity:0.8;
+}
+table {
+
+background-color:black;
+   border: 1px solid black;
+   border-collapse: collapse;
+   width: 70%;
+   margin-top:2.5%;
+   text-align: center;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:auto;
+   margin-bottom:auto;
+   padding:15px;
+   opacity:0.85;
+   text-color:white;
+   border-bottom: 1px solid #ddd;
+}
+th, td,tr {
+	
+
+
+   border: 2px solid beige;
+   border-collapse: collapse;
+ 
+   text-align: center;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top=auto;
+   padding:15px;
+    color:white;
+   border-bottom: 1px solid #ddd;
+   font-style: bold;
+	font-family: "Impact","Charcoal", sans-serif;
+	font-size:25px;
+	font-weight: normal;
+	font-color: blue;
+}
+
+#demo{
+	font-style: italic;
+	font-family: OpenSans-Semibold;
+	font-size:25px;
+	font-weight: normal;
+	font-color: black;
+}
+.button {
+
+    background-color: white; 
+
+    border-color: beige;
+	height:8%;
+    color: black;
+
+    font-style: italic;
+
+    font-family: cursive;
+
+    padding: 10px 25px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin: 30px 70px;
+
+    -webkit-transition-duration: 0.4s; 
+
+    transition-duration: 0.4s;
+
+    cursor: pointer;
+
+	margin-right :0px;
+	margin-left :2px;
+    position: relative;
+
+    left: 1px;
+
+	
+		font-style: bold;
+	font-family: "Impact","Charcoal", sans-serif;
+	font-size:30px;
+	font-weight: normal;
+	font-color: blue;
+	border-radius:10px
+
+}
+.button:hover {
+
+    background-color: gold; 
+
+    color: black;
+opacity:0.7;
+    font: white;
+
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+	
+}
+
+.button1:hover {
+    background-color:Teal;
+    color: black;
+	opacity:0.7;
+}
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid hsl(39, 75%, 50%);
+	border-radius:100%;
+	}
+.button2:hover {
+    background-color:hsl(39, 60%, 50%);
+    color: black;
+}
+*/
+
+#s1{
+	font-style: italic;
+	font-family: OpenSans-Semibold;
+	font-size:25px;
+	font-weight: normal;
+	font-color: blue;
+
+}
+#s2{
+	font-style: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:35px;
+	font-weight: normal;
+	font-color: black;
+}
+.s3{
+	font-style: bold;
+	font-family: "Impact","Charcoal", sans-serif;
+	font-size:30px;
+	font-weight: normal;
+	font-color: blue;
+}
+#s4{
+	font-style: bold;
+	font-family: "Times New Roman", sans-serif;
+	font-size:30px;
+	font-weight: normal;
+	font-color: blue;
+}
+
+/*
+.dropbtn {
+	
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 25px;
+    border-radius: 20%;
+    cursor: pointer;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: hsl(39, 60%, 50%);
+}
+body{
+	
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	height: 750px;
+	background-size: 100% 100%;
+}
+
+*/
+#navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navli {
+    float: left;
+}
+
+#nava {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nava:hover {
+    background-color: #111;
+}
+</style> 
+</head>
+</html>
+

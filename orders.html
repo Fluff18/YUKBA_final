@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="vastr.css">
+<title>Orders</title>
+<nav>
+<ul id="navul" class="s3">
+  <li id="navli"><a  href="new-1.html" id="nava">Home</a></li>
+
+  <li id="navli"><a href="about_us.html" id="nava">About</a></li>
+	  <li id="navli"><a href="#contact" id="nava"><img style="height:5%" src="fb.png"></a></li>
+	  <li id="navli"><a href="#contact" id="nava"><img style="height:5%" src="inst.png"></a></li>
+	  </ul>
+<br>
+<br>
+<br>
+
+</nav>
+</head>
+
+	<script>
+	function usercheck()
+	{
+	//alert("hello");
+	var y=JSON.parse(localStorage.getItem('clickedname'));
+	}
+	
+	function shirtclick()
+	{
+	localStorage.setItem('clickedtype',JSON.stringify("shirt"));
+	}
+	function pantclick()
+	{
+	localStorage.setItem('clickedtype',JSON.stringify("pant"));
+	}
+	function validateForm() {
+    var  e = document.getElementById("cloth");
+    var strUser = e.options[e.selectedIndex].value;
+	
+	if(strUser=="Pant")
+	{	
+		window.location=  "pant.php";
+	}
+	else if(strUser=="Shirt")
+	{
+		window.location="shirt.php";
+	}
+	}
+</script>
+<body onload="usercheck()" style="background-image:url('shirtpant.jpg');background-repeat: repeat;">
+<center>
+	<h1 class="s3"  style=" text-align:center; font-size:50px">Type</h1>
+<br>
+<br>
+<br>
+	<a href="shirt.php"style="margin-right:70px" ><img src="shirt.png"></img></a>
+	<a href="pant.php" ><img src="pant.png"></img></a>
+	
+	
+
+
+	
+</center>
+
+</body>
+</html>
